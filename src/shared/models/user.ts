@@ -1,4 +1,4 @@
-import IntegrationService from "../services/integration-service";
+import IntegrationService from "@services/integration-service";
 import { LangCode } from "../utils/localization";
 import { Integration } from "./integration";
 

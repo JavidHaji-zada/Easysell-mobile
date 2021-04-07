@@ -1,13 +1,17 @@
-import { User } from '../models/user'
+import { Subject } from 'rxjs'
+import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
+import { User } from '@models/user'
 import firebase from '@utils/firebase'
 import { LangCode } from '@utils/localization'
-import UserService from './user-service'
+import UserService from '@services/user-service'
 
 
 class AuthService {
+    onAuthStateChanged: Subject<AuthAction> = new Subject();
     async createUser(email: string, password: string, firstname: string, lastname: string, lang: LangCode) {
         try {
-            let res = await firebase.auth().createUserWithEmailAndPassword(email, password)
+            let res = await auth().createUserWithEmailAndPassword(email, password)
             console.log('res ', res)
             //TODO save user to firestore
             let currentUser = {
@@ -17,8 +21,12 @@ class AuthService {
                 email,
                 _id: res.user?.uid
             }
-            await firebase.firestore().collection('users').doc(currentUser._id).set({ firstname, lastname, lang, email, _id: res.user?.uid })
+            await firestore().collection('users').doc(currentUser._id).set({ firstname, lastname, lang, email, _id: res.user?.uid })
             UserService.currentUser = new User(currentUser)
+            this.onAuthStateChanged.next({
+                type: 'register',
+                user: new User(currentUser)
+            })
             return { result: "success" }
         } catch (err) {
             console.log('err ', err)
@@ -29,8 +37,11 @@ class AuthService {
     async signIn(email: string, password: string) {
         try {
             let res = await firebase.auth().signInWithEmailAndPassword(email, password)
-            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
             return this.getUserData().then(user => {
+                this.onAuthStateChanged.next({
+                    type: 'login',
+                    user
+                })
                 return user
             })
         } catch (err) {
@@ -41,6 +52,10 @@ class AuthService {
     async Logout() {
         try {
             let res = await firebase.auth().signOut();
+            this.onAuthStateChanged.next({
+                type: 'logout',
+                user: null
+            })
             console.log("logout successfull");
         } catch (err) {
             throw err
@@ -60,6 +75,11 @@ class AuthService {
         }
     }
 
+}
+
+export type AuthAction = {
+    type: "login" | "logout" | "register"
+    user: User
 }
 
 export default new AuthService();

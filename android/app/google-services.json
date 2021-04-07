@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "61891594092",
+    "project_id": "easysell-9a8b0",
+    "storage_bucket": "easysell-9a8b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61891594092:android:0072c5efaf59829141d549",
+        "android_client_info": {
+          "package_name": "com.easysell"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61891594092-sbolvjn3gqfrn1rp4d02dus7sm3ss2a6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4FKqbodPTg3O5_9GN4w9VNTGatAzTKSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61891594092-sbolvjn3gqfrn1rp4d02dus7sm3ss2a6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
