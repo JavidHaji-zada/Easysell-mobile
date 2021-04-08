@@ -15,7 +15,7 @@ function AppNavigator() {
     function onAuthStateChanged(result: User) {
         setUser(result)
         if (result) {
-            strings.setLanguage(result.lang);
+            strings.setLanguage(result.lang.substring(0, 2));
         }
     }
 
