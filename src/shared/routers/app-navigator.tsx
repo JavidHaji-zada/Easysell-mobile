@@ -11,9 +11,7 @@ const Stack = createStackNavigator();
 export const AuthContext = createContext(null);
 
 function AppNavigator() {
-    // const [initializing, setInitializing] = useState(false);
     const [user, setUser] = useState<User>(null);
-
     function onAuthStateChanged(result: User) {
         setUser(result)
         if (result) {
@@ -25,7 +23,9 @@ function AppNavigator() {
         const authSub = authService.onAuthStateChanged.subscribe(action => {
             onAuthStateChanged(action.user)
         })
-        return authSub.unsubscribe();
+        return () => {
+            authSub.unsubscribe()
+        };
     }, [])
 
     return user ? (

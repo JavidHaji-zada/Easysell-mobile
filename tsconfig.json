@@ -48,6 +48,9 @@
 			"@shared/*": [
 				"src/shared/*",
 			],
+			"@hooks/*": [
+				"src/hooks/*",
+			],
 			"@utils/*": [
 				"src/shared/utils/*",
 			],

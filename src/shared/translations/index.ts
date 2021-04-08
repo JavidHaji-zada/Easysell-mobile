@@ -10,5 +10,5 @@ let strings = new LocalizedStrings({
     az
 })
 
-strings.setLanguage('en');
+strings.setLanguage('tr');
 export default strings;

@@ -4,3 +4,9 @@ export default {
     Localization,
     Firebase
 }
+export function createAction(type, payload) {
+    return {
+      type,
+      payload,
+    };
+  }

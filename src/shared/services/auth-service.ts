@@ -6,10 +6,9 @@ import firebase from '@utils/firebase'
 import { LangCode } from '@utils/localization'
 import UserService from '@services/user-service'
 
-
 class AuthService {
     onAuthStateChanged: Subject<AuthAction> = new Subject();
-    async createUser(email: string, password: string, firstname: string, lastname: string, lang: LangCode) {
+    async register(email: string, password: string, firstname: string, lastname: string, lang: LangCode) {
         try {
             let res = await auth().createUserWithEmailAndPassword(email, password)
             console.log('res ', res)
