@@ -37,6 +37,7 @@ class AuthService {
         try {
             let res = await firebase.auth().signInWithEmailAndPassword(email, password)
             return this.getUserData().then(user => {
+                UserService.currentUser = user;
                 this.onAuthStateChanged.next({
                     type: 'login',
                     user
