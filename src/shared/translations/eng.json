@@ -22,11 +22,20 @@
 			"email-already-in-use": "Email already in use."
 		}
 	},
+	"dashboard": {},
 	"common": {
 		"name": "Name",
 		"surname": "Surname",
 		"e-mail": "E-mail",
-		"password": "Password"
+		"password": "Password",
+		"nav": {
+			"login": "Login",
+			"register": "Register",
+			"dashboard": "Dashboard",
+			"listings": "Listings",
+			"orders": "Orders",
+			"products": "Products"
+		}
 	},
 	"errors": {
 		"field-empty": "This field cannot be blank!",

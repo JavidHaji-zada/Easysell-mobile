@@ -22,11 +22,20 @@
 			"email-already-in-use": "Bu e-posta zaten kullanılıyor."
 		}
 	},
+	"dashboard": {},
 	"common": {
 		"name": "İsim",
 		"surname": "Soyisim",
 		"e-mail": "E-posta",
-		"password": "Şifre"
+		"password": "Şifre",
+		"nav": {
+			"login": "Giriş Yap",
+			"register": "Kayıt ol",
+			"dashboard": "Gösterge Paneli",
+			"listings": "Listelemeler",
+			"orders": "Siparişler",
+			"products": "Ürünler"
+		}
 	},
 	"errors": {
 		"field-empty": "Bu alan boş bırakılamaz!",
@@ -36,8 +45,6 @@
 	"enter-creds": "Bilgilerinizi Girin.",
 	"multi-channel-retail-platform": "Çok Kanallı\nSatış Platformu",
 	"manage-sales": "Satışlarınızı, siparişlerinizi ve envanterinizi tek bir yerden yönetin",
-	"listings": "Listelemeler",
-	"orders": "Siparişler",
 	"integration": "Entegrasyonlar",
 	"profile": "Profil",
 	"about": "Hakkımızda",

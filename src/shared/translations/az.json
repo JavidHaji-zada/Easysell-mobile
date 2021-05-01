@@ -1,6 +1,6 @@
 {
 	"login": {
-		"login": "Daxil olun",
+		"login": "Giriş et",
 		"welcome": "Xoş gəlmisiniz",
 		"login-to-continue": "Davam etmək üçün daxil olun...",
 		"forgot-password": "Şifrəni unutmusunuz?",
@@ -12,7 +12,7 @@
 		}
 	},
 	"register": {
-		"register": "Qeydiyyatı tamamla",
+		"register": "Register",
 		"confirm-password": "Şifrəni təsdiqlə",
 		"error": {
 			"unequal-pass": "Şifrələr eyni deyil!",
@@ -22,11 +22,20 @@
 			"email-already-in-use": "Daxil etdiyiniz e-poçt istifadə edilir."
 		}
 	},
+	"dashboard": {},
 	"common": {
 		"name": "Ad",
 		"surname": "Soyad",
 		"e-mail": "E-poçt",
-		"password": "Şifrə"
+		"password": "Şifrə",
+		"nav": {
+			"login": "Giriş et",
+			"register": "Register",
+			"dashboard": "Panel",
+			"listings": "Siyahılar",
+			"orders": "Sifarişlər",
+			"products": "Məhsullar"
+		}
 	},
 	"errors": {
 		"field-empty": "Boş qala bilməz!",
@@ -36,8 +45,6 @@
 	"enter-creds": "Məlumatlarınızı Daxil Edin.",
 	"multi-channel-retail-platform": "Çox Kanallı\nSatış Platforması",
 	"manage-sales": "Satışlarınızı, sifarişlərinizi və inventarınızı tək bir yerdən idarə edin",
-	"listings": "Siyahılar",
-	"orders": "Sifarişlər",
 	"integration": "İnteqrasiyalar",
 	"profile": "Profil",
 	"about": "Haqqımızda",

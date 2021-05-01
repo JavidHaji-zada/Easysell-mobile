@@ -1,12 +1,12 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-function Home(): JSX.Element {
+function Products(): JSX.Element {
 
     return (
         <View>
-            <Text>Home Screen</Text>
+            <Text>Products Screen</Text>
         </View>
     )
 }
-export default Home;
+export default Products;
